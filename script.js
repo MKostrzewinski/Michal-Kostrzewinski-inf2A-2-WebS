@@ -18,16 +18,16 @@ document.getElementById('upload').onchange = function(e) {  //Pobieranie obrazka
   let canvasElem = document.getElementById('canvas') // przypisuje zmienna do elementu html
   let ctx = canvasElem.getContext('2d');
 
-  const myImgData = ctx.getImageData(0, 0, canvasElem.width, canvasElem.height); // zmienna w ktorej przechowuje dane z pikseli
+  const PixelNumber = ctx.getImageData(0, 0, canvasElem.width, canvasElem.height); // zmienna w ktorej przechowuje dane z pikseli
 
-  for (let i=0; i < myImgData.data.length; i += 4) {  //  pętla która zwiększa kazdy piksel o 5 (tak zwiększy jasność)
-    myImgData.data[i] =   5 + myImgData.data[i];  //  [i] = Red
-    myImgData.data[i+1] = 5 + myImgData.data[i+1]; // [i+1] = Green
-    myImgData.data[i+2] = 5 + myImgData.data[i+2]; // [i+2] = Blue
+  for (let i=0; i < PixelNumber.data.length; i += 4) {  //  pętla która zwiększa kazdy piksel o 5 (tak zwiększy jasność)
+    PixelNumber.data[i] =   5 + PixelNumber.data[i];  //  [i] = Red
+    PixelNumber.data[i+1] = 5 + PixelNumber.data[i+1]; // [i+1] = Green
+    PixelNumber.data[i+2] = 5 + PixelNumber.data[i+2]; // [i+2] = Blue
 
 }
 
-    ctx.putImageData(myImgData, 0, 0); // Wpisuje piksele do canvasa
+    ctx.putImageData(PixelNumber, 0, 0); // Wpisuje piksele do canvasa
     ctx.drawImage(this, 0, 0) // rysuje nowy rysunek
 
 
@@ -40,31 +40,75 @@ document.getElementById('upload').onchange = function(e) {  //Pobieranie obrazka
   let canvasElem = document.getElementById('canvas')
   let ctx = canvasElem.getContext('2d');
 
-  const myImgData = ctx.getImageData(0, 0, canvasElem.width, canvasElem.height);
+  const PixelNumber = ctx.getImageData(0, 0, canvasElem.width, canvasElem.height);
 
-  for (let i=0; i < myImgData.data.length; i += 4) {
-    myImgData.data[i] = myImgData.data[i] - 5; 
-    myImgData.data[i+1] = myImgData.data[i+1] - 5; // tym razem zmniejsza piksele o 5 
-    myImgData.data[i+2] = myImgData.data[i+2] - 5;
+  for (let i=0; i < PixelNumber.data.length; i += 4) {
+    PixelNumber.data[i] = PixelNumber.data[i] - 5; 
+    PixelNumber.data[i+1] = PixelNumber.data[i+1] - 5; // tym razem zmniejsza piksele o 5 
+    PixelNumber.data[i+2] = PixelNumber.data[i+2] - 5;
     
 }
-    ctx.putImageData(myImgData, 0, 0);
+    ctx.putImageData(PixelNumber, 0, 0);
     ctx.drawImage(this, 0, 0)
   
   } )
 
-  /*let konUP = document.getElementById('konUP')
-
+  let konUP = document.getElementById('konUP')  // Funkcja zwiekszająca kontrast
     
   konUP.addEventListener('click', function(){
   let canvasElem = document.getElementById('canvas')
   let ctx = canvasElem.getContext('2d');
 
-  const myImgData = ctx.getImageData(0, 0, canvasElem.width, canvasElem.height);
+  const PixelNumber = ctx.getImageData(0, 0, canvasElem.width, canvasElem.height);
 
-  //
-  // fora napisz
-  //
-  //
+  for (let i=0; i < PixelNumber.data.length; i += 4) {
 
-  })*/
+    if(PixelNumber.data[i]<=128){                   // Dodaje 2 punkty do każdego piksela większego od 128 i 
+      PixelNumber.data[i] = PixelNumber.data[i] -2;        // analogicznie odejmuje 2 punkty  od mniejszego
+    }else{
+      PixelNumber.data[i] = PixelNumber.data[i] + 2;
+    };
+    if(PixelNumber.data[i+1]<=128){
+      PixelNumber.data[i+1] = PixelNumber.data[i+1] -2;   // Wiem że te ify napisałem jak idiota bo powinienem użyć suwaka ale przyjąłem taką 
+    }else{                                                //  koncepcje że będę używał buttonów i udało mi się wymyślić coś takiego :)
+      PixelNumber.data[i+1] = PixelNumber.data[i+1] + 2;
+    };
+    if(PixelNumber.data[i+2]<=128){
+      PixelNumber.data[i+2] = PixelNumber.data[i+2] -2;
+    }else{
+      PixelNumber.data[i+2] = PixelNumber.data[i+2] + 2;
+    };   
+}
+  ctx.putImageData(PixelNumber, 0, 0);
+  ctx.drawImage(this, 0, 0)
+})
+
+let konDOWN = document.getElementById('konDOWN')  // Analogiczna funkcja 
+    
+konDOWN.addEventListener('click', function(){
+let canvasElem = document.getElementById('canvas')
+let ctx = canvasElem.getContext('2d');
+
+const PixelNumber = ctx.getImageData(0, 0, canvasElem.width, canvasElem.height);
+
+for (let i=0; i < PixelNumber.data.length; i += 4) {
+
+  if(PixelNumber.data[i]<=128){ 
+    PixelNumber.data[i] = PixelNumber.data[i] + 2;
+  }else{
+    PixelNumber.data[i] = PixelNumber.data[i] - 2;
+  };
+  if(PixelNumber.data[i+1]<=128){
+    PixelNumber.data[i+1] = PixelNumber.data[i+1] + 2;
+  }else{         
+    PixelNumber.data[i+1] = PixelNumber.data[i+1] - 2;
+  };
+  if(PixelNumber.data[i+2]<=128){
+    PixelNumber.data[i+2] = PixelNumber.data[i+2] +2;
+  }else{
+    PixelNumber.data[i+2] = PixelNumber.data[i+2] - 2;
+  };   
+}
+ctx.putImageData(PixelNumber, 0, 0);
+ctx.drawImage(this, 0, 0)
+})
