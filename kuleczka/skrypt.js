@@ -7,9 +7,9 @@ function handleOrientation(event) {
     let gamma    = event.gamma;
   }
 
-let kuleczka = document.querySelector("#kuleczka");
-let stol = document.querySelector("#stol");
-let output = document.querySelector("#output");
+let kuleczka = document.querySelector('.kuleczka');
+let stol = document.querySelector('.stol');
+let output = document.querySelector('.output');
 
 let maxX = stol.clientWidth - kuleczka.clientWidth;
 let maxY = stol.clientHeight - kuleczka.clientHeight;
