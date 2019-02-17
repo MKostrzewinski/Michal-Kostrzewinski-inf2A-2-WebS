@@ -1,0 +1,36 @@
+body{
+    background-color:teal;
+    font-family: sans-serif;
+}
+
+#klawiatura{
+    display: block;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 0 auto;
+    width: 1000px;
+    height: 40%;
+    background-color: blue;
+}
+
+.AwataryKlawiszy{
+    height: 30px;
+    width: 65px;
+    padding: 10px;
+    margin:5px;
+    /*position: absolute;*/
+    background-color:azure;
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+}
+
+#u{
+    margin-left: 197px;
+}
+
+#space{
+    width: 700px;
+    margin-left:149px ;
+}
+
