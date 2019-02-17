@@ -34,3 +34,7 @@ body{
     margin-left:149px ;
 }
 
+audio{
+    display: none;
+}
+
