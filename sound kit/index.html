@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mordujemy Photoshopa</title>
+    <title>Sound-kit</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
 <body>
-        <div id="QWER">
+                            <!-- Stary kod -->
+        <!--<div id="QWER">
             <audio data-key="81" src="boom.wav" id="boom"></audio>
             <audio data-key="87" src="clap.wav" id="clap"></audio>
             <audio data-key="69" src="hihat.wav" id="hihat"></audio>
@@ -25,7 +26,22 @@
 
         <div id="SPACE">
             <audio data-key="32" src="tom.wav" id="tom"></audio>
-        </div>
+        </div>-->
+
+        
+        <audio src="boom.wav" id="boom" controls></audio>
+        <audio src="clap.wav" id="clap" controls></audio>
+        <audio src="hihat.wav" id="hihat" controls></audio>
+        <audio src="kick.wav" id="kick" controls></audio>
+
+        <audio src="openhat.wav" id="openhat" controls></audio>
+        <audio src="ride.wav" id="ride" controls></audio>
+        <audio src="snare.wav" id="snare" controls></audio>
+        <audio src="tink.wav" id="tink" controls></audio>
+
+        <audio src="tom.wav" id="tom" controls></audio>
+
+
     
         <div id="klawiatura">
 
@@ -42,6 +58,10 @@
             <br><div class="AwataryKlawiszy" id="space"><p>Space</p></div>
 
         </div>
+
+        <button type="button" id="nagrywaj">Nagrywaj</button>
+        <button type="button" id="stop">Stop</button>
+        <button type="button" id="graj">Graj</button>
 
     <script src="skrypt.js"></script>
 </body>
