@@ -113,7 +113,7 @@ ctx.putImageData(PixelNumber, 0, 0);
 ctx.drawImage(this, 0, 0)
 })
 
- /* let satUP = document.getElementById('satUP') 
+  let satUP = document.getElementById('satUP') 
 
   satUP.addEventListener('click', function(){   //Funkcja do nasycenia
   let canvasElem = document.getElementById('canvas')     // Nie jestem pewien czy tak właśnie działa nasycenie ale tak to zrozumiałem
@@ -134,9 +134,7 @@ ctx.drawImage(this, 0, 0)
 
     if(PixelNumber[i+2]>PixelNumber[i] && PixelNumber[i+2]>PixelNumber[i+1]){PixelNumber[i+2]+=5}
     else if(PixelNumber[i+2]<PixelNumber[i] && PixelNumber[i+2]<PixelNumber[i+1]){PixelNumber[i+2]-=5}
-    else{if(PixelNumber[i+2]>=avg){PixelNumber[i+2]-=5}else{PixelNumber[i+2]+=5}}
-
-    if(PixelNumber[i]<0)
+    else{if(PixelNumber[i+2]>=avg){PixelNumber[i+2]-=5}else{PixelNumber[i+2]+=5}}   
   }
   ctx.putImageData(PixelNumber, 0, 0);
   ctx.drawImage(this,0,0);
@@ -162,7 +160,7 @@ ctx.drawImage(this, 0, 0)
   }
   ctx.putImageData(PixelNumber, 0, 0);
   ctx.drawImage(this,0,0);
-  })*/
+  })
 
   let canvas = document.getElementById('canvas');
   let ctx = canvas.getContext('2d');
