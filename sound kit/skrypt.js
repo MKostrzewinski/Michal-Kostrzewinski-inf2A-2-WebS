@@ -126,7 +126,7 @@ document.querySelector('#nagrywanie').addEventListener('click', function (e){
     }
 
     function odtwarzaj3 () {
-      kanal2.forEach(sound => {
+      kanal3.forEach(sound => {
         setTimeout(
           () => graj(sound.name), sound.time
         )
@@ -134,7 +134,7 @@ document.querySelector('#nagrywanie').addEventListener('click', function (e){
     }
 
     function odtwarzaj4 () {
-      kanal2.forEach(sound => {
+      kanal4.forEach(sound => {
         setTimeout(
           () => graj(sound.name), sound.time
         )
