@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <nav>
+        <h1>Note Pocket</h1>
+        <input type="text" id="tytulMenu" placeholder="Tytuł Notatki" maxlength="23">
+        <input type="text" id="trescMenu" placeholder="Co chcesz zanotować?" maxlength="80">
+        <select id="kolorMenu">
+            <option value="yellow" id="y">Żółty</option>
+            <option value="red" id="r">Czerwony</option>
+            <option value="green" id="g">Zielony</option>
+            <option value="blue" id="b">Niebieski</option>
+        </select>
+        <button id="utworz" onclick="notatka()">Utwórz</button>
+    </nav>
+
+    <div class="notka">
+        <h2>tytuł</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

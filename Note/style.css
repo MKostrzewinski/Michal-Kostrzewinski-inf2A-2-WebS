@@ -1,0 +1,91 @@
+body {
+    background-image: url("korek.jpg");
+  }
+
+nav{
+    background-image: url("tloNav.jpg");
+    padding: 20px;
+    width: 500px;
+    height: 380px;
+    border-radius:25px; 
+    margin: 20px;
+    display: box;
+}
+
+nav h1{
+    color: aliceblue;
+    margin-left: 20px;
+    font-size:50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tytulMenu{
+    display:box;
+    width: 400px;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    background:rgba(255,255,255,0.2);
+    border:none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+}
+
+#trescMenu{
+    width: 400px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top:20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    background:rgba(255,255,255,0.2);
+    border:none;
+    box-sizing: border-box;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+}
+
+#kolorMenu{
+    margin-left: 20px;
+    height: 20px;
+    background:rgba(255,255,255,0.2);
+    color: #C0C0C0;
+}
+
+#y{
+    background-color:yellow; 
+}
+#r{
+    background-color:red; 
+}
+#g{
+    background-color:green; 
+}
+#b{
+    background-color:blue; 
+}
+
+#utworz{
+    width: 100px;
+    height: 20px;
+    background-color:#F4A460; 
+    border:none;
+    margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 2.5px 10px;
+    border-radius:5px; 
+}
+
+.notka{
+    width: 300px;
+    height: 100px;
+    margin:30px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: yellow;
+    border-radius:5px; 
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
