@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-    <nav>
+    <nav id="tak">
         <h1>Note Pocket</h1>
         <input type="text" id="tytulMenu" placeholder="Tytuł Notatki" maxlength="23">
         <input type="text" id="trescMenu" placeholder="Co chcesz zanotować?" maxlength="80">
@@ -20,10 +20,12 @@
         </select>
         <button id="utworz" onclick="notatka()">Utwórz</button>
     </nav>
-
-    <div class="notka">
-        <h2>tytuł</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
+    <div id="tablica">
+        <!---<div class="notka">
+            <h2 id="tytulNotatki">tytuł</h2>
+            <p id="trescNotatki">Lorem ipsum dolor sit amet.</p>
+            <p id="dataNotatki"></p>
+        </div>-->
     </div>
     <script src="script.js"></script>
 </body>
