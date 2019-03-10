@@ -1,0 +1,11 @@
+#mapa {
+    height: 600px;
+    width: 800px;
+    border:20px ridge #DAA520;
+    margin-top: 50px;
+    margin-left: 50px;
+   }
+
+   body{
+       background-color: #EEE8AA;
+   }
