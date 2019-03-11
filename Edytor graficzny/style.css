@@ -1,3 +1,148 @@
+body{
+    background-color:#FFDEAD;
+}
+
 #canvas{
-    border: 2px solid black;
+    border:20px inset #10a749;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    background-color:white;
+}
+
+#jas,#kon,#sat,#rysowanie{
+    border:10px inset #106ba7;
+    position: absolute;
+    left: 940px;
+    top: 50px;
+    padding:10px;
+    background-color: rgb(138, 153, 187);
+    
+}
+
+#jasDOWN, #konDOWN, #satDOWN{
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    border: none;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+#jasDOWN:hover, #konDOWN:hover, #satDOWN:hover{
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(80, 80, 80);
+    border: none;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+#jasUP, #konUP, #satUP{
+    border-radius: 4px;
+    color: Black;
+    background-color: white;
+    border: none;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+#jasUP:hover, #konUP:hover, #satUP:hover{
+    border-radius: 4px;
+    color: Black;
+    background-color: rgb(161, 161, 161);
+    border: none;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+#kon{
+    left: 940px;
+    top: 160px;
+}
+
+#sat{
+    left: 940px;
+    top: 270px;
+}
+
+#rysowanie{
+    width: 204px;
+    left: 940px;
+    top: 380px;
+    text-align: center;
+}
+
+#rysowanie button{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: none;
+}
+
+#black{
+    background-color: black;
+}
+#white{
+    background-color: white;
+}
+#red{
+    background-color: red;
+}
+#lime{
+    background-color: lime;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+#cyan{
+    background-color: cyan;
+}
+#magenta{
+    background-color: magenta;
+}
+#silver{
+    background-color: silver;
+}
+#gray{
+    background-color: gray;
+}
+#maroon{
+    background-color: maroon;
+}
+#olive{
+    background-color: olive;
+}
+#green{
+    background-color: green;
+}
+#purple{
+    background-color: purple;
+}
+#teal{
+    background-color: teal;
+}
+#navy{
+    background-color: navy;
+}
+
+#rysowanie button:hover{
+    opacity: 0.5;
+}
+
+#upload{
+    position: absolute;
+    top: 486px;
+    left: 940px;
 }
