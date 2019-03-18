@@ -1,22 +1,50 @@
 let srodek, map, marker
 let ws
 let players = {}
-let nick = '1'
+let nick;
+let ikona = "https://picsum.photos/20/20/?random"; //przypisuję randomowy awatar
+
+    alert('Pamietaj żeby zezwolić na sprawdzenie lokalizacji!'); //informacja o prosbię o lokalizację
+
+ nick = prompt('Podaj swój nick:', 'Nick'); // pobiera nick od gracza
+
+    if (nick != null) {
+        alert('Witaj ' + nick);
+    } else {
+        alert('Nie wpisałeś nicku!');
+    }
+
+
+function image(){                                          //ustawia awatar na wlasne zdjęcię
+    let preview = document.querySelector('img');
+    let file    = document.querySelector('input[type=file]').files[0];
+    ikona  = new FileReader();
+
+    ikona.onloadend = function () {
+        preview.src = ikona.result;
+    }
+
+    if (file) {
+        ikona.readAsDataURL(file);
+    } else {
+        preview.src = "https://picsum.photos/20/20/?random"; // tak dla pewności
+    }
+}
 
 
     function initMap() {
-        srodek = { lat: 52.191, lng: 19.355 };
+        srodek = { lat: 52.191, lng: 19.355 };  //ustawia parametry mapy. lokalizacja zoom itp
         map = new google.maps.Map(document.getElementById('mapa'), {
             zoom: 8,
             center: srodek,
             keyboardShortcuts: false
         });
         
-        marker = new google.maps.Marker({
+        marker = new google.maps.Marker({ //ustawia parametry markera np obrazek i animacje
             position: srodek,
             map: map,
             animation: google.maps.Animation.DROP,
-            icon: 'https://picsum.photos/20/20/?random'
+            icon: ikona
         });
         getLocalization()
         startWebSocket()
@@ -27,7 +55,7 @@ let nick = '1'
         window.addEventListener('keydown', poruszMarkerem)
     }
     function poruszMarkerem(ev) {
-        let lat = marker.getPosition().lat()
+        let lat = marker.getPosition().lat()        // sterowanie
         let lng = marker.getPosition().lng()
     
         switch (ev.code) {
