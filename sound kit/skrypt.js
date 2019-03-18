@@ -1,33 +1,4 @@
-//Stary kod
-
-/*window.addEventListener('keydown', function (e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-    if (!audio) return
-    audio.play()
-    audio.currentTime = 0
-})
-
-let zapis = 0;
-
-document.querySelector('#nagrywanie').addEventListener('click', function (e){
-    zapis = Date.now()
-    nagrywa = !nagrywa
-  })*/
-/*window.addEventListener('keydown', function (e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-    if (!audio) return
-    audio.play()
-    audio.currentTime = 0
-})
-
-let zapis = 0;
-
-document.querySelector('#nagrywanie').addEventListener('click', function (e){
-    zapis = Date.now()
-    nagrywa = !nagrywa
-  })*/
-
-  document.addEventListener('DOMContentLoaded', appStart)
+ document.addEventListener('DOMContentLoaded', appStart)
 
 
   const kanal1 = []
@@ -57,6 +28,7 @@ document.querySelector('#nagrywanie').addEventListener('click', function (e){
       110: "tom",
       118: "tom",
   
+      //duże litery
       81: "boom",
       87: "clap",
       69: "hihat",
@@ -85,6 +57,8 @@ document.querySelector('#nagrywanie').addEventListener('click', function (e){
       document.querySelector('#graj4').addEventListener('click', odtwarzaj4)
   }
     
+  //Funkcje do nagrywania na kanałach
+
     function nagrywaj (e) {
       startNagrywania = Date.now()
       nagrywa = !nagrywa
@@ -109,7 +83,9 @@ document.querySelector('#nagrywanie').addEventListener('click', function (e){
       e.target.innerHTML = nagrywa4 ? 'Stop' : 'Nagrywaj' 
     }
     
-    function odtwarzaj () {
+    //funkcje do odtwarzania z kanałów:
+
+    function odtwarzaj () { 
       kanal1.forEach(sound => {
         setTimeout(
           () => graj(sound.name), sound.time
@@ -145,9 +121,9 @@ document.querySelector('#nagrywanie').addEventListener('click', function (e){
  * @param {*} a       
  */
 
-    function grajDzwiek (a) {
-      const nazwaDzwieku = dzwieki[a.keyCode];
-      
+    function grajDzwiek (a) { //wybiera jaki dźwięk ma być zagrany (jaki klawisz) pobiera tą informacje z @param
+      const nazwaDzwieku = dzwieki[a.keyCode]; 
+      console.log(a)
       graj(nazwaDzwieku);
     
     if(nagrywa) {
@@ -238,7 +214,7 @@ document.querySelector('#nagrywanie').addEventListener('click', function (e){
 
     
   
-  function graj(nazwaDzwieku) {
+  function graj(nazwaDzwieku) {  //gra
     const audioDOM = document.querySelector(`#${nazwaDzwieku}`);
     audioDOM.currentTime = 0;
     audioDOM.play();
